@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="flex">
+          <div class="logo">
+            <a href="/">
+              <img
+                src="./imgs/nav logo.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <ul>
+            <li>
+              <a href="#about"><span>About Us</span><span>About Us</span></a>
+            </li>
+            <li>
+              <a href="#services"><span>Services</span><span>Services</span></a>
+            </li>
+            <li>
+              <a href="#contact"><span>Blogs</span><span>Blogs</span></a>
+            </li>
+            <li>
+              <a href="#home"><span>FAQ</span><span>FAQ</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- contact btn -->
+        <div class="nav-btns">
+          <a href="#contact" class="contact-btn">
+            <span>Contact</span>
+          </a>
+          <div class="menu-btn">
+            <span>|||</span>
+          </div>
+        </div>
+      </nav>
+      <section class="section-1">
+        <div class="blur-bubble-top"></div>
+        <div class="blur-bubble-bottom"></div>
+        <div class="section-1-content">
+          <div class="section-1-text">
+            <div class="section-1-head">Experience the Future</div>
+            <div class="section-1-subhead">
+              AI-Powered Marketing, Your Pathway to Success in the Digital Age.
+              We build brands and accelerate startups in MENA.
+            </div>
+            <div class="main-btn">
+              <a href="#contact">Get Started</a>
+            </div>
+          </div>
+          <div class="section-1-ball">
+            <div class="balls">
+              <div class="ball"></div>
+              <div class="ball"></div>
+              <div class="ball"></div>
+              <div class="ball"></div>
+              <div class="ball"></div>
+              <div class="ball"></div>
+              <div class="ball"></div>
+              <div class="ball"></div>
+              <div class="ball"></div>
+              <div class="ball"></div>
+              <div class="ball"></div>
+            </div>
+          </div>
+        </div>
+        <div class="companies">
+          <div class="companies-title">COMPANIES TRUSTED BY US</div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const menuBtn = document.querySelector(".menu-btn");
+      const ul = document.querySelector("nav ul");
+      const mainball = document.querySelector(".balls");
+      const balls = document.querySelectorAll(".ball");
+      const nav = document.querySelector("nav");
+
+      // Balls animation
+      balls.forEach((ball) => {
+        ball.addEventListener("mouseover", () => {
+          ball.style.animation = "ball-hover .5s linear";
+        });
+        ball.addEventListener("animationend", () => {
+          ball.style.animation = "";
+        });
+      });
+
+      // Main ball animation
+      document.body.addEventListener("mousemove", (e) => {
+        if (window.innerWidth < 768) return;
+        var x = -2 + e.x / 290;
+        var y = e.y / 290;
+        mainball.style.transform = `rotate3d(2, ${x} ,${y}, 70deg)`;
+      });
+
+      // Menu button animation
+      menuBtn.addEventListener("click", () => {
+        ul.classList.toggle("active");
+        menuBtn.classList.toggle("btnactive");
+      });
+
+      // Scroll animation
+      document.addEventListener("scroll", (e) => {
+        // if scroll down
+        if (window.scrollY > 100) {
+          nav.style.border = "1px solid #2d1f4f";
+        } else {
+          nav.style.border = "1px solid transparent";
+        }
+      });
+    </script>
+  </body>
+</html>
