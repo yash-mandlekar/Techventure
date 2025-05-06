@@ -1,12 +1,12 @@
 :root {
-  /* --dark-blue: #121f2d; */
-  /* --blur-red: #ff0000; */
-  /* --dark-red: #810000; */
-  /* --gradient: linear-gradient(60deg, #ff7b00, black); */
-  --dark-blue: #2d1f4f;
-  --blur-red: #8000ff;
-  --dark-red: #4b0082;
-  --gradient: linear-gradient(60deg, #5500a9, #2d1f4f);
+  --dark-blue: #121f2d;
+  --blur-red: #ff0000;
+  --dark-red: #810000;
+  --gradient: linear-gradient(60deg, #ff7b00, black);
+/*   --dark-blue: #2d1f4f; */
+/*   --blur-red: #8000ff; */
+/*   --dark-red: #4b0082; */
+/*   --gradient: linear-gradient(60deg, #5500a9, #2d1f4f); */
   --translate3d-value: 100px;
 }
 * {
